@@ -1,6 +1,7 @@
 {-
   A really simple introductory Haskell program
   Emma Norling, September 2020
+  Modified by Samuel Kent, Septenber 2020
 -}
 
 module Basics where
@@ -15,3 +16,6 @@ module Basics where
 
     -- Again, no type definition. This lead to a problem illustrated in the lecture.
     inc2 = (+ 1) -- another way of doing the same thing
+
+    negate1 :: Bool -> Bool -- Negation of a value.
+    negate1 x = not x
