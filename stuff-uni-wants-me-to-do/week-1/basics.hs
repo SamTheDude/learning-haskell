@@ -19,3 +19,7 @@ module Basics where
 
     negate1 :: Bool -> Bool -- Negation of a value.
     negate1 x = not x
+
+    -- Test to convert values.
+    convertTest :: Integer -> Int
+    convertTest x = fromInteger(x)
