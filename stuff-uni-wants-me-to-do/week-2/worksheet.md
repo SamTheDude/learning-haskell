@@ -160,7 +160,7 @@ Have a go at these exercises. If you have questions, come along to online the dr
         ```
         that decides if a four-digit bank card number is valid. For example:
         ``` Haskell
-        > luhn 1 7 8 4
+        > luhn 1 7 8 3
         True
         > luhn 4 7 8 3
         False

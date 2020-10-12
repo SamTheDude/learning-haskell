@@ -3,8 +3,6 @@ File to complete all the tasks listed in the worksheet.
 Samuel Kent, 2020
 -}
 
-data Shape = Circle Float | Rect Float Float deriving Show
-
 module Week2 where
     {- Q1: Fixed: name, arguments and indentation. -}
     n = a `div` (length xs)
@@ -105,5 +103,22 @@ module Week2 where
     choose x = filter (\(b, n) -> n < 10 && b) x
 
     {- Q12 -}
-    scale :: Shape a => a -> a
-    scale s = s * 2
+    data Shape = Circle Float | Rect Float Float deriving (Show, Eq)
+
+    scale :: Float -> Shape -> Shape
+    scale f (Circle m) = Circle(m * f)
+    scale f (Rect m1 m2) = Rect (m1 * f) (m2 * f)
+    -- How in the name do I use Guarded function here??????
+    --scale f s | (Circle m) = Circle(m * f)
+
+    {- Q13 -}
+    luhnDouble :: Int -> Int
+    luhnDouble x = (x * 2) `mod` 9
+
+    luhn :: Int -> Int -> Int -> Int -> Bool
+    luhn x1 x2 x3 x4 = 
+        ((luhnDouble x1) + 
+        (luhnDouble x2) + 
+        (luhnDouble x3) + 
+        (luhnDouble x4)) 
+        `mod` 10 == 0
