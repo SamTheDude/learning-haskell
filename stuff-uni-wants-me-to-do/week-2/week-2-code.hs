@@ -3,6 +3,8 @@ File to complete all the tasks listed in the worksheet.
 Samuel Kent, 2020
 -}
 
+data Shape = Circle Float | Rect Float Float deriving Show
+
 module Week2 where
     {- Q1: Fixed: name, arguments and indentation. -}
     n = a `div` (length xs)
@@ -100,4 +102,8 @@ module Week2 where
     {- Q11 -}
     records = [(True,5), (False,7), (True,12), (True,8), (False,15), (True,4)]
     choose :: (Ord a, Num a) => [(Bool, a)] -> [(Bool, a)]
-    choose x = filter (\x -> x!!2 < 10) x
+    choose x = filter (\(b, n) -> n < 10 && b) x
+
+    {- Q12 -}
+    scale :: Shape a => a -> a
+    scale s = s * 2
