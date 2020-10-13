@@ -46,14 +46,14 @@ Look at the definition of nth from the same mini-lecture, and using the same app
 zip [1,2,3] ”abcdefg” = [(1,’a’), (2,’b’), (3,’c’)]
 ```
 
-	•	The Leibniz formula for  is given by: 1 - 1/3 + 1/5 - 1/7 
+	•	The Leibniz formula for  is given by: 1 - 1/3 + 1/5 - 1/7...
 
 Write a function approx_pi that takes a single argument: the tolerance you want for the return value. The output should be a tuple: the first value in the tuple should be the approximation of the value of , accurate at this tolerance. The second item in the tuple should be the number of recursive steps that were required to get this accuracy.
 
 For example:
 
 ```Haskell
-> approx._pi 0.001
+> approx_pi 0.001
 (3.1420924036835256,2000)
 ```
 (Yes, it converges very slowly.)
