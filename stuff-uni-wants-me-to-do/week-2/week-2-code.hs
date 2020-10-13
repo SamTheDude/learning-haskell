@@ -3,7 +3,11 @@ File to complete all the tasks listed in the worksheet.
 Samuel Kent, 2020
 -}
 
+
+
 module Week2 where
+    import Data.Typeable (typeOf)
+
     {- Q1: Fixed: name, arguments and indentation. -}
     n = a `div` (length xs)
         where
@@ -108,8 +112,16 @@ module Week2 where
     scale :: Float -> Shape -> Shape
     scale f (Circle m) = Circle(m * f)
     scale f (Rect m1 m2) = Rect (m1 * f) (m2 * f)
-    -- How in the name do I use Guarded function here??????
-    --scale f s | (Circle m) = Circle(m * f)
+
+    {-
+    Trying to work out Guards, looks like they might not work here.
+    scale f s
+        | (Circle 1) == s = Circle(f)
+        | (Rect 1 1) == s = Rect (f) (f)
+    -}
+
+    scale_circle :: Float -> Shape
+
 
     {- Q13 -}
     luhnDouble :: Int -> Int
